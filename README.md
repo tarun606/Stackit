@@ -1,6 +1,7 @@
 # 🧠 StackIt – A Q&A Collaboration Platform
 
 Live Demo: [stackit-qa.netlify.app](https://stackit-qa.netlify.app/)
+Live Demo Video: https://drive.google.com/drive/folders/1VB3muN1RWc_eDUC9WbkL6bTiirOU0sQ2?usp=sharing
 
 StackIt is a collaborative Q&A web application built using **React**, **Firebase**, and **TailwindCSS**, designed to help developers ask, answer, and organize technical questions in a clean, responsive interface.
 
