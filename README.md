@@ -1,12 +1,71 @@
-# React + Vite
+# 🧠 StackIt – A Q&A Collaboration Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live Demo: [stackit-qa.netlify.app](https://stackit-qa.netlify.app/)
 
-Currently, two official plugins are available:
+StackIt is a collaborative Q&A web application built using **React**, **Firebase**, and **TailwindCSS**, designed to help developers ask, answer, and organize technical questions in a clean, responsive interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features & Functionality
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🔐 Authentication
+- **Login & Register** functionality using Firebase Authentication.
+- Secure sign-in with email & password.
+- Displays user avatar and logout options when logged in.
+
+### 🏠 Home Page (`/`)
+- Displays the **"All Questions"** feed.
+- Questions are listed with:
+  - Vote count (👍 Thumbs Up / 👎 Thumbs Down)
+  - Tags and posted time
+  - Author and interaction icons
+- Includes a **“Post a Question”** button to navigate to the Ask Question page.
+
+### ➕ Ask Question (`/ask`)
+- Authenticated users can post questions.
+- Fields:
+  - **Title**
+  - **Description**
+  - **Tags**
+- Automatically associates the question with the currently logged-in user.
+- Adds the post to Firestore for persistence.
+
+### ❓ View Question Detail (`/question/:id`)
+- Full question view with:
+  - Title and detailed description
+  - Tags
+  - Voting buttons (upvote/downvote)
+  - Posted date and author info
+- **Answers Section**:
+  - Users can write answers in a rich text input box
+  - All answers are listed with votes and user info
+
+### 🧾 My Questions (`/my-questions`)
+- Displays only the questions posted by the currently logged-in user.
+- Edit and delete options (if implemented) may be available.
+
+### 🔍 Search Functionality
+- A search input lets users find questions by title or tags in real-time.
+- Helps quickly filter large sets of questions.
+
+### 💬 Rich Text Editor for Answers
+- Includes basic formatting options:
+  - Bold, Italic, Strikethrough
+  - Lists, alignment, link, image, emoji support
+- Enhances the readability of responses
+
+### 🔔 Notification Icons (UI Only)
+- Bell, User, and other Lucide icons used for future features like notifications and profile actions.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React + Vite
+- **Styling**: TailwindCSS
+- **Icons**: Lucide-react
+- **Authentication**: Firebase Auth
+- **Database**: Firestore
+- **Hosting**: Netlify
+
+---
